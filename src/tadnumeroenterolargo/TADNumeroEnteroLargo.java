@@ -25,6 +25,10 @@ public class TADNumeroEnteroLargo {
 
         NumeroEnteroLargo numero2 = new NumeroEnteroLargo("11");
         System.out.println("numero2: " + numero2);
+        
+        NumeroEnteroLargo numero3 = new NumeroEnteroLargo();
+        System.out.println("numero3: " + numero3);
+        
 
         //Sumamos los 2 NumeroEnteroLargo
         NumeroEnteroLargo resultadoSuma = numero1.suma(numero2);

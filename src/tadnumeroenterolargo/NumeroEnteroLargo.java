@@ -11,30 +11,27 @@ package tadnumeroenterolargo;
  */
 public class NumeroEnteroLargo {
 
-    String NumeroEnteroLargo;
+    String numeroEnteroLargo;
     int[] arrayNum;
     int largo;
 
-    public NumeroEnteroLargo(String NumeroEnteroLargo) {
-        this.NumeroEnteroLargo = NumeroEnteroLargo;
-        largo = this.NumeroEnteroLargo.length();
+    public NumeroEnteroLargo(String numeroEnteroLargo) {
+        this.numeroEnteroLargo = numeroEnteroLargo;
+        largo = this.numeroEnteroLargo.length();
         arrayNum = new int[largo];
 
         for (int i = 0; i < arrayNum.length; i++) {
-            String cadaNumero = NumeroEnteroLargo.substring(i, i + 1);
+            String cadaNumero = numeroEnteroLargo.substring(i, i + 1);
             arrayNum[i] = Integer.parseInt(cadaNumero);
         }
     }
 
     public NumeroEnteroLargo() {
-        this.NumeroEnteroLargo = "0";
-        largo = this.NumeroEnteroLargo.length();
-        arrayNum = new int[largo];
+        this.numeroEnteroLargo = "0";
+        largo = 1;
+        arrayNum = new int[1];
+        arrayNum[0] = 0;
 
-        for (int i = 0; i < arrayNum.length; i++) {
-            String cadaNumero = NumeroEnteroLargo.substring(i, i + 1);
-            arrayNum[i] = Integer.parseInt(cadaNumero);
-        }
     }
 
     @Override
@@ -51,12 +48,12 @@ public class NumeroEnteroLargo {
     }
 
     public void cambiarValor(String nuevoNumeroEnteroLargo) {
-        this.NumeroEnteroLargo = nuevoNumeroEnteroLargo;
-        largo = this.NumeroEnteroLargo.length();
+        this.numeroEnteroLargo = nuevoNumeroEnteroLargo;
+        largo = this.numeroEnteroLargo.length();
         arrayNum = new int[largo];
 
         for (int i = 0; i < arrayNum.length; i++) {
-            String cadaNumero = NumeroEnteroLargo.substring(i, i + 1);
+            String cadaNumero = numeroEnteroLargo.substring(i, i + 1);
             arrayNum[i] = Integer.parseInt(cadaNumero);
 
         }
@@ -64,7 +61,7 @@ public class NumeroEnteroLargo {
 
     public NumeroEnteroLargo suma(NumeroEnteroLargo otro) {
         NumeroEnteroLargo resultado = new NumeroEnteroLargo();
-        
+
         int largo1 = this.getLargo();
         int largo2 = otro.getLargo();
         int largoSuma;
@@ -78,7 +75,6 @@ public class NumeroEnteroLargo {
         resultado.largo = largoSuma;
         resultado.arrayNum = new int[largoSuma];
 
-        
         int suma = 0;
         int llevo = 0;
         int i = largo1 - 1;
@@ -170,6 +166,5 @@ public class NumeroEnteroLargo {
         return resultado;
 
     }
-
 
 }
