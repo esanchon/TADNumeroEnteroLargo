@@ -27,11 +27,7 @@ public class NumeroEnteroLargo {
     }
 
     public NumeroEnteroLargo() {
-        this.numeroEnteroLargo = "0";
-        largo = 1;
-        arrayNum = new int[1];
-        arrayNum[0] = 0;
-
+        this("0");
     }
 
     @Override
