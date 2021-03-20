@@ -64,7 +64,7 @@ public class NumeroEnteroLargo {
 
     public NumeroEnteroLargo suma(NumeroEnteroLargo otro) {
         NumeroEnteroLargo resultado = new NumeroEnteroLargo();
-        //calculamos el largo del nuevo NumeroEnteroLargo resultado de la suma
+        
         int largo1 = this.getLargo();
         int largo2 = otro.getLargo();
         int largoSuma;
@@ -78,7 +78,7 @@ public class NumeroEnteroLargo {
         resultado.largo = largoSuma;
         resultado.arrayNum = new int[largoSuma];
 
-        //sumamos los valores numero a número según la posición en el array
+        
         int suma = 0;
         int llevo = 0;
         int i = largo1 - 1;
@@ -171,27 +171,5 @@ public class NumeroEnteroLargo {
 
     }
 
-////Restar dos objetos NumerosEnteroLargo. El resultado es un nuevo NumeroEnteroLargo.
-//    public NumeroEnteroLargo resta(NumeroEnteroLargo otroNumeroEnteroLargo) {
-//        NumeroEnteroLargo restaNumeroEnteroLargo = new NumeroEnteroLargo();
-//        //creo un NumeroEnteroLargo del largo del mayor de los 2
-//        if (this.largo >= otroNumeroEnteroLargo.largo) {
-//            restaNumeroEnteroLargo.arrayNum = new int[this.largo];
-//        } else {
-//            restaNumeroEnteroLargo.arrayNum = new int[otroNumeroEnteroLargo.largo];
-//        }
-//        //resto cada posición de los arrays de los 2 NumerosLargos
-//        int llevoUna = 0;
-//        for (int i = 0; i < restaNumeroEnteroLargo.largo; i++) {
-//            if (this.arrayNum[i] + llevoUna > otroNumeroEnteroLargo.arrayNum[i]) {
-//                restaNumeroEnteroLargo.arrayNum[i] = this.arrayNum[i] + 10 - otroNumeroEnteroLargo.arrayNum[i];
-//                llevoUna = 1;
-//            } else {
-//                restaNumeroEnteroLargo.arrayNum[i] = this.arrayNum[i] - otroNumeroEnteroLargo.arrayNum[i];
-//                llevoUna = 0;
-//            }
-//
-//        }
-//        return restaNumeroEnteroLargo;
-//    }
+
 }
