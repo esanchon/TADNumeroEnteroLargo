@@ -20,7 +20,7 @@ public class TADNumeroEnteroLargo {
     public static void main(String[] args) {
 
         //Creamos 2 NumeroEnteroLargo
-        NumeroEnteroLargo numero1 = new NumeroEnteroLargo("10");
+        NumeroEnteroLargo numero1 = new NumeroEnteroLargo("100");
         System.out.println("numero1: " + numero1);
 
         NumeroEnteroLargo numero2 = new NumeroEnteroLargo("11");

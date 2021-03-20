@@ -138,14 +138,15 @@ public class NumeroEnteroLargo {
         int k = largoResta - 1;
 
         while (i >= 0 && j >= 0) {
-            if (this.arrayNum[i] + llevoUna >= otro.arrayNum[j]) {
-                resta = this.arrayNum[i] + llevoUna - otro.arrayNum[j];
+            if (this.arrayNum[i] >= otro.arrayNum[j] + llevoUna) {
+                resta = this.arrayNum[i] - otro.arrayNum[j] - llevoUna ;
+                llevoUna = 0;
                 i--;
                 j--;
                 resultado.arrayNum[k] = resta;
                 k--;
             } else {
-                resta = this.arrayNum[i] + llevoUna + 10 - otro.arrayNum[j];
+                resta = this.arrayNum[i] + 10 - otro.arrayNum[j] - llevoUna;
                 llevoUna = 1;
                 i--;
                 j--;
@@ -155,9 +156,9 @@ public class NumeroEnteroLargo {
         }
 
         while (i >= 0) {            //si numero1 es mayor que numero2
-            resta = this.arrayNum[i] + llevoUna;
-            llevoUna = 0;
+            resta = this.arrayNum[i] - llevoUna;
             resultado.arrayNum[k] = resta;
+            llevoUna = 0;
             i--;
             k--;
 
