@@ -12,7 +12,7 @@ package tadnumeroenterolargo;
 public class NumeroNegativoException extends Exception {
 
     public NumeroNegativoException(String causa) {
-        super (causa);
+        super(causa);
     }
-    
+
 }
